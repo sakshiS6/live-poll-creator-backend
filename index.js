@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 //importing express
 const express = require("express");
@@ -43,7 +44,7 @@ io.on("connection", (socket) => {
 //creating an express app
 
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 //middleware
 app.use(
